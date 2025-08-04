@@ -1,5 +1,5 @@
 # Music-Player
-
+- [ ] FINISH BY END OF THE WEEK
 This is a simple music player that can run in the terminal. 
 
 ### Features
