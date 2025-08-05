@@ -1,11 +1,11 @@
-# Music-Player
+# Bank-System
 - [ ] FINISH BY END OF THE WEEK
-- [ ] Encorporate audio methods
-
-This is a simple music player that can run in the terminal. 
-
+This is a simple banking program that runs in the command line  
+Minimum Viable product: A text based interface that provides the features below
 ### Features
-- Add a song to a library and save it 
-- Add songs to a playlist
-- Play, pause, skip and select previous tracks
-- Rearrange current queue
+- User is required to login with email and password
+  - Program will validate if email is valid that both will match 
+- Deposit and withdraw money from a bank account
+- Check current balance
+- Check previous purchases and their categories
+- Change category of purchases
