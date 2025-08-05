@@ -1,5 +1,7 @@
 # Music-Player
 - [ ] FINISH BY END OF THE WEEK
+- [ ] Encorporate audio methods
+
 This is a simple music player that can run in the terminal. 
 
 ### Features
