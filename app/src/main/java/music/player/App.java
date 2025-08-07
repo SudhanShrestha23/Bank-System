@@ -10,17 +10,41 @@ public class App {
     }
 
     public static void main(String[] args){
-       
-        Scanner scanner = new Scanner(System.in);
-        
-            System.out.println(new App().getGreeting());
+        // loadInformation();
+        Account account = new Account(); 
+        Methods methods = new Methods(account);
+        Ui ui = new Ui(account);
+        try (Scanner scanner = new Scanner(System.in)) {
+            boolean login = false;
+            int choice;
+            do {
+
+                System.out.println("Select your options");            
+                ui.printLandingPage();
+                choice = scanner.nextInt();
+                scanner.nextLine();
+                
+                switch (choice) {
+                    case 1:
+                        login = true;   
+                        break;
+                    case 2:
+                    methods.setAccountDetails(scanner);
+                        break;
+                    case 3:
+                        break;
+                    default:
+                    System.out.println("Select a valid input");
+                } 
+            } while(login == false || choice == 3);
             System.out.println("---------------------------");
             System.out.println("Welcome to the Banking App!");
 
             //After login
-            Ui.printChoices();
-           
-            scanner.close();
-       
+            ui.printMainPage();
+            scanner.nextLine();
+            
+            System.out.println();
+        } 
     }
 }
