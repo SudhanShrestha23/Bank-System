@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Methods {
-    private Account account;
+    @SuppressWarnings("FieldMayBeFinal")
+    public Account account;
 
     public Methods(Account account) {
         this.account = account;
@@ -30,10 +31,13 @@ public class Methods {
         }
     }
 
-    public void validateDetails(String email, String password) {
+    public boolean validateDetails(String email, String password) {
+        boolean correct = false;
         if (account.getEmail().equals(email) && account.getPassword().equals(password)) {
             System.out.println("Login successful");  
+            correct = true;
         } 
+        return correct;
     }
 
     public boolean checkAccount() {
@@ -42,5 +46,10 @@ public class Methods {
             exists = false;
         }
         return exists;
+    }
+
+    public void printAccountDetails() {
+        System.out.printf("Balance: $%.2f",account.getBalance());
+        System.out.println();
     }
 }
